@@ -13,9 +13,7 @@ async def calculate_api(calculation: str, a: float, b: float):
         elif calculation == '*':
             result = multiply(a, b)  
         elif calculation == '/':
-            result = divide(a, b) 
-        else:
-            raise HTTPException(status_code=400, detail="Invalid calculation. Allowed operations are +, -, *, /.")
+            result = divide(a, b)
         
 
         return {f"{a} {calculation} {b}": result}
