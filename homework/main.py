@@ -14,9 +14,14 @@ async def calculate_api(calculation: str, a: float, b: float):
             result = multiply(a, b)  
         elif calculation == '/':
             result = divide(a, b)
-        
+        elif calculation == '^':
+            result = power(a, b)
+        elif calculation == 'sqrt':
+            result = square_root(a)
+        else:
+            raise ValueError("Invalid calculation type.")
 
-        return {f"{a} {calculation} {b}": result}
+        return {f"{a} {calculation} {b if b is not None else ''}": result}
     
     except ValueError as e:
         raise HTTPException(status_code=400, detail=str(e))
