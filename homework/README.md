@@ -1,6 +1,9 @@
 패키지 구조 설명: main.py와 calculation.py로 나눠서 작성
+
                 main.py는 요청을 보내고 서버를 관리하는 파일
+                
                 calculation.py는 계산 관련 함수를 추가한 파일
+                
 
 이유: 코드의 복잡성을 줄이고 유지 보수를 쉽게 하기 위함
 
